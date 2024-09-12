@@ -1,0 +1,14 @@
+{
+  "name": "testing-mern",
+  "version": "1.0.0",
+  "description": "testing-MERN",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Sammy",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
