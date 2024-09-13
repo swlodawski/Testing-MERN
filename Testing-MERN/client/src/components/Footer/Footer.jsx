@@ -1,16 +1,28 @@
-import { Link } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Footer = () => {
+ const location = useLocation();
+ const navigate = useNavigate()
     return(
-        <header className='bg-primary text-light mb-4 py-3 flex-row align-center'>
-            <div className='container flex-row justify-space-between-lg justify-center align-center'>
-                <Link className='text-light' to='/'>
-                <h1 className='m-0'>Tech Thoughts</h1>
-                </Link>
-                <p className='m-0'>Get into the mind ofa programmer.</p>
+        <footer className="w-100 mt-auto bg-secondary p-4">
+            <div className="container text-center mb-5">
+                {location.pathname !== '/' && (
+                    <button className="btn btn-dark mb-3"
+                    onClick={() => navigate(-1)}>
+                        &larr; Go Back
+                    </button>
+                )}
+                <h4>Made With {''}
+                <span className="emoji"
+                role="img"
+                aria-label="heart"
+                aria-hidden>
+                    By the Tech Thoughts Team
+                </span>
+                </h4>
             </div>
-        </header>
+        </footer>
     );
 };
 
-export default Header;
+export default Footer;
