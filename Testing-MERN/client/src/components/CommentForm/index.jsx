@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useMutation, useQuery } from "@apollo/client";
 
 import { ADD_COMMENT } from "../../utils/mutations";
-import { spawn } from "child_process";
 
 const CommentForm = ({ thoughtId }) => {
     const [commentText, setCommentText] = useState('');
