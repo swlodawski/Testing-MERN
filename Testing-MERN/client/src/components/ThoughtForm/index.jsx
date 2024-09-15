@@ -4,9 +4,6 @@ import { useMutation} from '@apollo/client';
 import { ADD_THOUGHT} from '../../utils/mutations';
 import { QUERY_THOUGHTS } from '../../utils/queries';
 
-import { ADD_THOUGHT } from "../../utils/mutations";
-import { QUERY_THOUGHTS } from "../../utils/queries";
-
 const ThoughtForm = () => {
     const [formState, setFormState] = useState({
         thoughtText: '',
